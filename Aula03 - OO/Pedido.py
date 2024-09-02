@@ -1,5 +1,6 @@
 from Pessoa import Pessoa
 from Produto import Produto
+from Categoria import Categoria
 
 class Pedido:
 
