@@ -2,12 +2,16 @@ import sys
 from PyQt5.QtWidgets import QApplication
 #from TelaProduto import TelaProduto
 from TelaPerecivel import TelaPerecivel
+from TelaPrincipal import TelaPrincipal
 
 app = QApplication(sys.argv)
 #telaProd = TelaProduto("Cadastro de Produto")
 #telaProd.show()
 
-telaPerecivel = TelaPerecivel()
-telaPerecivel.show()
+#telaPerecivel = TelaPerecivel()
+#telaPerecivel.show()
+
+tp = TelaPrincipal()
+tp.show()
 sys.exit( app.exec_() )
 
