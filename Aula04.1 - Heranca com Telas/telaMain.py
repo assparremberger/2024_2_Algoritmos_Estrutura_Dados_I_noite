@@ -11,7 +11,25 @@ app = QApplication(sys.argv)
 #telaPerecivel = TelaPerecivel()
 #telaPerecivel.show()
 
-tp = TelaPrincipal()
-tp.show()
+#tp = TelaPrincipal()
+#tp.show()
+
+
+
+from Cidade import Cidade
+from FormCliente import FormCliente
+
+listaCidades = []
+
+listaCidades.append( Cidade("Porto Alegre") )
+listaCidades.append( Cidade("Canoas") )
+
+formCli = FormCliente(pessoas=[], cidades= listaCidades )
+formCli.show()
+
 sys.exit( app.exec_() )
+
+
+
+
 

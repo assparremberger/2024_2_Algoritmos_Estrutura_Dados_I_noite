@@ -26,6 +26,6 @@ class FormCidade(QMainWindow):
         self.layout.addWidget( self.btnSalvar )
 
     def salvar(self):
-        if self.txtNome.size > 0:
+        if len(self.txtNome.text) > 0:
             cid = Cidade( self.txtNome.text )
             self.cidades.append( cid )
