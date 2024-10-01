@@ -68,9 +68,9 @@ class FormVeiculo(QMainWindow):
         modelo = self.txtModelo.text()
         if len(modelo)  > 0 :
             veiculo = Veiculo( modelo )
-            if len( self.txtPlaca.text() ) > 1:
+            if len( self.txtPlaca.text() ) > 0:
                 veiculo.placa = self.txtPlaca.text()
-            if self.cmbCategoria.currentIndex() > 0:
+            if self.cmbCategoria.currentIndex() > 1:
                 veiculo.categoria = self.cmbCategoria.currentData()
 
             veiculo.automatico = self.chbAutomatico.isChecked()
