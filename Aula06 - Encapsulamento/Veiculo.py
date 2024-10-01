@@ -9,6 +9,27 @@ class Veiculo:
         self.categoria = cat
         self.__kilometragem = 0
 
+    
+    #método acessor
+    def getKilometragem(self):
+        return self.__kilometragem
+
+    #método modificador
+    def setKilometragem(self, km):
+        if km > self.__kilometragem:
+            self.__kilometragem = km
+
+
+    @property
+    def kilometragem(self, km):
+        return self.__kilometragem
+
+    @kilometragem.setter
+    def kilometragem(self, km):
+        if km > self.__kilometragem:
+            self.__kilometragem = km
+
+
     def __str__(self):
         txt = "\nModelo: " + self.modelo
         txt += "\nPlaca: " + self.placa

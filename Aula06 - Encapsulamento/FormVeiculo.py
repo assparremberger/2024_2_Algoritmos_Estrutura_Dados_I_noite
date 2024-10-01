@@ -36,6 +36,12 @@ class FormVeiculo(QMainWindow):
         self.layout.addWidget( self.lblPlaca )
         self.layout.addWidget( self.txtPlaca )
 
+        self.lblKM = QLabel("Kilometragem: ")
+        self.txtKM = QLineEdit(self)
+        self.txtKM.setPlaceholderText("0000")
+        self.layout.addWidget( self.lblKM )
+        self.layout.addWidget( self.txtKM )
+
         # self.btnCarregarCategorias = QPushButton("Atualizar Categorias", self)
         # self.btnCarregarCategorias.clicked.connect( self.carregarCategorias )
         # self.layout.addWidget( self.btnCarregarCategorias )
@@ -72,6 +78,9 @@ class FormVeiculo(QMainWindow):
                 veiculo.placa = self.txtPlaca.text()
             if self.cmbCategoria.currentIndex() > 1:
                 veiculo.categoria = self.cmbCategoria.currentData()
+
+            if len( self.txtKM.text() ) > 0:
+                veiculo.kilometragem = int( self.txtKM.text() )
 
             veiculo.automatico = self.chbAutomatico.isChecked()
             
