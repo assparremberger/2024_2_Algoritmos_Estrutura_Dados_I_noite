@@ -13,6 +13,7 @@ fila.add( "Júlia" )
 fila.remover()
 fila.remover()
 fila.remover()
+
 fila.add( "Adalto" )
 fila.remover()
 fila.remover()
